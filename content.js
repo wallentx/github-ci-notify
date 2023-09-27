@@ -32,6 +32,7 @@ function checkCIStatus() {
     console.log("All checks complete but some failed. Sending message to background.");
     chrome.runtime.sendMessage({action: "someChecksFailed"});
     notifiedForCompletion = true;
+  }
 }
 
 setInterval(checkCIStatus, 5000);
