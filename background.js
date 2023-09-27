@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   } else if (message.action === 'someChecksFailed') {
     chrome.notifications.create('failedNotification', {
       type: 'basic',
-      iconUrl: 'iconFailed.png',
+      iconUrl: 'iconFail.png',
       title: 'CI Checks Complete',
       message: 'All CI checks for the GitHub pull request are complete, but some failed.'
     });
