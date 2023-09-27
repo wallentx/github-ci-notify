@@ -13,8 +13,9 @@ function checkCIStatus() {
   ciStatusElements.forEach((element) => {
     const inProgress = element.querySelector('svg.anim-rotate');
     const completed = element.querySelector('svg.octicon-check.color-fg-success');
+    const queued = element.querySelector('svg.octicon-dot-fill');  // Added this line
 
-    if (inProgress) {
+    if (inProgress || queued) {
       allChecksComplete = false;
       notifiedForCompletion = false;
     }
